@@ -1,0 +1,65 @@
+{
+  "frames": [
+    {
+      "filename": "demo_loading",
+      "frame": {
+        "x": 1,
+        "y": 1,
+        "w": 423,
+        "h": 179
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 10,
+        "w": 423,
+        "h": 179
+      },
+      "sourceSize": {
+        "w": 429,
+        "h": 192
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "game_logo",
+      "frame": {
+        "x": 1,
+        "y": 182,
+        "w": 294,
+        "h": 379
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 56,
+        "y": 8,
+        "w": 294,
+        "h": 379
+      },
+      "sourceSize": {
+        "w": 400,
+        "h": 400
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  ],
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.5",
+    "image": "atlas.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 425,
+      "h": 562
+    },
+    "scale": 1
+  }
+}
