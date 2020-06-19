@@ -21,7 +21,7 @@ if (![true, true].pairs) {
                 }
             }
         },
-    }); 
+    });
 }
 
 if (![true].random) {
@@ -33,7 +33,7 @@ if (![true].random) {
 }
 
 let gameScene = {
-      
+
     key: "game-scene",
     active: true,
     create: createGame,
@@ -121,7 +121,7 @@ function startGame() {
 
     if (data.soundEnabled) {
         if (app.type != "mobvista") app.playMusic();
-        main.game.soundOn = true; 
+        main.game.soundOn = true;
     }
 
     // Code below here
@@ -275,7 +275,7 @@ function startGame() {
     let score = 0;
     let scoreText;
 
-    scoreText = this.add.text(16, 16, 'Score: ', {fontSize: '48px', fill: '#000', fontWeight: 'bold' });
+    scoreText = this.add.text(16, 16, 'Score: ', { fontSize: '48px', fill: '#000', fontWeight: 'bold' });
     // Add bomb images
 
     bombs = this.physics.add.group();
@@ -334,34 +334,26 @@ function updateGame(time, delta) {
         player.setVelocityX(-260);
 
         if (player.body.touching.down)
-        player.anims.play('dude_left', true);
-        else 
-        player.anims.play('dude_leftup', true);
-        
-    }
-    else if (cursors.right.isDown) {
+            player.anims.play('dude_left', true);
+        else player.anims.play('dude_leftup', true);
+
+    } else if (cursors.right.isDown) {
         player.setVelocityX(260);
 
-        if (player.body.touching.down) 
-        player.anims.play('dude_right', true);
-        else
-        player.anims.play('dude_rightup', true)
-    }
+        if (player.body.touching.down)
+            player.anims.play('dude_right', true);
+        else player.anims.play('dude_rightup', true);
 
-    else {
+    } else {
         player.setVelocityX(0);
-
         player.anims.play('dude_idle');
     }
 
     if (cursors.up.isDown && player.body.touching.down) {
         player.setVelocityY(-560);
-        player.isFly
         player.anims.play('dude_idle');
 
     }
-
-
 
     main.update();
 }
