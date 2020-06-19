@@ -121,7 +121,7 @@ function startGame() {
 
     if (data.soundEnabled) {
         if (app.type != "mobvista") app.playMusic();
-        main.game.soundOn = true;
+        main.game.soundOn = true; 
     }
 
     // Code below here
@@ -275,8 +275,7 @@ function startGame() {
     let score = 0;
     let scoreText;
 
-    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
-
+    scoreText = this.add.text(16, 16, 'Score: ', {fontSize: '48px', fill: '#000', fontWeight: 'bold' });
     // Add bomb images
 
     bombs = this.physics.add.group();
@@ -291,7 +290,7 @@ function startGame() {
         star.disableBody(true, true);
 
         score += 10;
-        scoreText.setText('Score: ' + score);
+        scoreText.setText('score: ' + score);
 
         if (stars.countActive(true) === 0) {
             stars.children.iterate(function (child) {
