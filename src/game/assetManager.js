@@ -109,6 +109,12 @@ function prepareAnims() {
             startNo: 5,
             endNo: 8,
             frameRate: 10        
+        }, {
+            name: "dude_rightup",
+            startNo: 6 
+        }, {
+            name: "dude_leftup",
+            startNo: 1 
         }]
     }
 

@@ -333,13 +333,21 @@ function updateGame(time, delta) {
     if (cursors.left.isDown) {
         player.setVelocityX(-260);
 
+        if (player.body.touching.down)
         player.anims.play('dude_left', true);
+        else 
+        player.anims.play('dude_leftup', true);
+        
     }
     else if (cursors.right.isDown) {
         player.setVelocityX(260);
 
+        if (player.body.touching.down) 
         player.anims.play('dude_right', true);
+        else
+        player.anims.play('dude_rightup', true)
     }
+
     else {
         player.setVelocityX(0);
 
@@ -348,7 +356,12 @@ function updateGame(time, delta) {
 
     if (cursors.up.isDown && player.body.touching.down) {
         player.setVelocityY(-560);
+        player.isFly
+        player.anims.play('dude_idle');
+
     }
+
+
 
     main.update();
 }
